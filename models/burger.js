@@ -1,23 +1,20 @@
 const orm = require("../config/orm.js");
 
-
-//Also inside burger.js, create the code that will call the ORM functions using burger specific input for the ORM.
-
 const burger = {
-    selectAll: function (cb) {
-        orm.selectAll("burgers", function (res) {
+    selectAll: cb => {
+        orm.selectAll("burgers", (res) => {
             cb(res);
         });
     },
 
-    insertOne: function (table, vals, cb) {
-        orm.insertOne("burgers", table, vals, function (res) {
+    insertOne: (cols, vals, cb) => {
+        orm.insertOne("burgers", cols, vals, (res) => {
             cb(res);
         });
     },
 
-    updateOne: function (table, vals, condition, cb) {
-        orm.updateOne("burgers", table, vals, condition, function (res) {
+    updateOne: (objColVals, condition, cb) => {
+        orm.updateOne("burgers", objColVals, condition, (res) => {
             cb(res);
         });
     }

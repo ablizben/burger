@@ -1,6 +1,6 @@
 <div class="container">
     <div class="col-md-12">
-        <div class="jumbotron jumbotron-fluid">
+        <div class="jumbotron d-flex align-items-center">
             <div class="container">
                 <h1 class="jumbo-title">Eat-Da-Burger!</h1>
             </div>
@@ -14,18 +14,8 @@
                         <h4 class="card-title">Available Burgers</h4>
                         <hr>
                         <ul class="list-unstyled">
-                            {{#each burger}} {{#unless devoured}} {{> burgers/burger-block devoured=true}} {{/unless}} {{/each}}
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title">Devoured Burgers</h4>
-                        <hr>
-                        <ul class="list-unstyled">
-                            {{#each burger}} {{#if devoured}} {{> burgers/burger-block devoured=false}} {{/if}} {{/each}}
+                            {{#each burgers}} {{#unless devoured}} {{> burgers/burgers-block devoured=true}} {{/unless}}
+                            {{/each}}
                         </ul>
                     </div>
                 </div>
@@ -37,11 +27,24 @@
                         <hr>
                         <form>
                             <div class="form-group">
-                                <input class="form-control" id="newBurgerName" type="text" placeholder="Something yummy goes here">
+                                <input class="form-control" id="newBurgerName" type="text"
+                                    placeholder="Something yummy goes here">
                                 <br>
                                 <button type="button" class="btn btn-info" id="makeBurger">Make My Burger!</button>
                             </div>
                         </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Devoured Burgers</h4>
+                        <hr>
+                        <ul class="list-unstyled">
+                            {{#each burgers}} {{#if devoured}} {{> burgers/burgers-block devoured=false}} {{/if}}
+                            {{/each}}
+                        </ul>
                     </div>
                 </div>
             </div>

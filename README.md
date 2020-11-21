@@ -1,24 +1,36 @@
-<h2>Unit 13 Node Express Handlebars: Eat-Da-Burger App</h2>
-The purpose of this homework was an app following an MVC design pattern and utilizing MySQL, Node, Express, Handlebars, and a homemade ORM. 
+# Eat-Da-Burger App
 
-<h3>Code Style</h3>
-<ul>
-  <li>HTML</li>
-  <li>CSS</li>
-  <li>JavaScript</li>
-  <li>Express.js</li>
-  <li>SQL</li>
-</ul>
+## Description
 
-<h3>Prerequisites</h3>
-<ul>
-  <li>Visual Studio Code</li>
-  <li>GitHub Account</li>
-  <li>NPM Inquirer Package</li>
-  <li>MySQL Workbench</li>
-</ul>
+An app that follows an MVC design pattern that allows the user to "devour" a burger already created, add a burger of their own creation, and remake a burger that has already been devoured.
 
-<h3>Eat-Da-Burger Criteria</h3>
-<li>As a user, whenever I submit a burger's name, the app will display the burger on the left side of the page.</li>
-<li>Each burger in the waiting area also has a Devour It! button, when clicked the burger will move to the right side of the page.</li>
-<li>The app will store every burger in a database, devoured or not</li>
+
+![](firstpicture.png)
+
+![](secondpicture.png)
+
+
+## Table of Contents
+            
+* [Installation](#Installation)
+* [Built With](#Usage) 
+
+
+## Installation
+
+If you'd like to get a copy of the project up and running on your local machine for development and testing purposes, follow the instructions below.
+
+### Prequisites
+
+- MySQL Workbench
+
+### Git clone the repository to your local machine:
+
+ git clone https://github.com/ablizben/burger
+
+
+## Built With
+
+- [Express.js](https://expressjs.com/) - a Node.js-based web application framework
+- [MySQL](https://mysql.com/) - Open-source relational database management system
+- Javascript, HTML, CSS
